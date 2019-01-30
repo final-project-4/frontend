@@ -6,7 +6,7 @@ import ProductShow from './components/ProductShow';
 import Auth from './components /Auth';
 import Search from './components/Search';
 import SearchResult from './components /SearchResult';
-import Comparison from './components /Comparison';
+//import Comparison from './components /Comparison';
 
 class App extends Component {
   constructor(){
