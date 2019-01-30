@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class ProductForm extends Component {
-    constructor(){
-        super();
-        this.state ={
+    constructor(props) {
+        super(props);
+        this.state = {
             name: props.activeProduct ? props.activeProduct.name : '',
             brand: props.activeProduct ? props.activeProduct.brand : '',
             description: props.activeProduct ? props.activeProduct.description : '',
@@ -11,7 +11,7 @@ class ProductForm extends Component {
             color: props.activeProduct ? props.activeProduct.color : '',
             model_year: props.activeProduct ? props.activeProduct.model_year : '',
             image: props.activeProduct ? props.activeProduct.image : '',
-            // id: props.activeProduct ? props.activeProduct.id : null
+            id: props.activeProduct ? props.activeProduct.id : null
         }
     }
 
@@ -31,12 +31,12 @@ class ProductForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log("handiling submit" , this.state)
+        console.log("handiling submit", this.state)
         this.props.handleSubmit(this.state)
     }
 
-    
-    render(){
+
+    render() {
         return (
             <div className='modal'>
                 <form className='show-form' onSubmit={this.handleSubmit.bind(this)}>
@@ -54,8 +54,8 @@ class ProductForm extends Component {
                 </form>
             </div>
 
-            )
-        }
+        )
     }
-    
-    export default ProductForm;
+}
+
+export default ProductForm;
