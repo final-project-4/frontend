@@ -36,7 +36,7 @@ class App extends Component {
       })
   }
 
-  createNewproduct(product) {
+  createNewProduct(product) {
     /* 
       posts data to the database, the database
       sends that same data back.
@@ -55,7 +55,7 @@ class App extends Component {
        console.log('DATA')
        console.log(data);
        const updateProducts = this.state.products.concat([data]);
-       console.log(updatedProducts)
+      //  console.log(updatedProducts)
        this.setState({
         products: updateProducts,
          activeProduct: data,
