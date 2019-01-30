@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Tile from './components /Tile';
-import ProductForm from './components/ProductForm';
-import ProductShow from './components/ProductShow';
+import ProductForm from './components /ProductForm';
+import ProductShow from './components /ProductShow';
 import Auth from './components /Auth';
-import Search from './components/Search';
+import Search from './components /Search';
 import SearchResult from './components /SearchResult';
 import Comparison from './components /Comparison';
 
@@ -195,6 +195,13 @@ class App extends Component {
             handleSubmit={this.handleSubmit.bind(this)} 
             toggleModal={this.toggleModal.bind(this)}
             activeProduct={this.state.activeProduct}
+            /> : ''}
+            {this.state.activeProduct ?
+            <ProductShow
+            setCurrentProduct={this.setCurrentProduct.bind(this)}
+            activeProduct={this.state.activeProduct}
+            toggleModal={this.toggleModal.bind(this)}
+            deleteProduct={this.deleteProduct.bind(this)}
             /> : ''}
       </div>
     );
