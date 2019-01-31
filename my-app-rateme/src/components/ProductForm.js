@@ -32,7 +32,8 @@ class ProductForm extends Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log("handiling submit", this.state)
-        this.props.handleSubmit(this.state)
+        this.props.handleSubmit(this.state) //we need if statemt here 
+        //when ever we create we need id 
     }
 
 

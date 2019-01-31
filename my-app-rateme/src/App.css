@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .tile {
   width: 250px;
   height: 400px;
@@ -29,4 +30,45 @@
   text-align: center;
   padding: 5px;
   color: white;
+}
+
+.show-form{
+  background-color: rgba(217, 223, 220, 0.9);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  width: 400px;
+  /* background-color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 500px; */
+}
+label{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.show-form input{
+  width: 350px;
+  margin: 5px 0 10px 10px;
+  font-size: 1em;
+}
+
+.show-form button{
+  font-size: 1em;
+  padding: 7px;
+  margin-top: 20px;
+  background-color:  rgb(51, 220, 223);
+  color: white;
+}
+
+.new-product {
+  background-color: rgb(87, 223, 223);
+  height: 30px;
+  width: 150px;
+  display: inline;
 }
