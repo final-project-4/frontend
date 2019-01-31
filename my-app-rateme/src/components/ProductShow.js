@@ -3,7 +3,7 @@ import React from 'react';
 const ProductShow = props => {
 
    return (
-       <div>
+       <div className= "we have to delete this">
        <div
          className="back"
          onClick={() => {
@@ -41,6 +41,7 @@ const ProductShow = props => {
          </div>
        </div>
      </div>
+  
    );
  };
 
