@@ -15,7 +15,8 @@ class App extends Component {
       products: [],
       activeProduct: null,
       modal: false,
-      search: false
+      search: false,
+      show: false
     }
   } 
 
@@ -132,9 +133,16 @@ class App extends Component {
           product={product}
           // name={product.name} 
           // image={product.image}
-          setCurrentProduct={this.setCurrentProduct.bind(this)}/>
+          setCurrentProduct={this.setCurrentProduct.bind(this)}
+          renderProduct= {this.renderProduct.bind(this)}
+          />
       )
     })
+  }
+
+  renderProduct(product){
+    console.log("product")
+    this.setState({activeProduct: product})
   }
 
   setCurrentProduct(product) {
@@ -166,7 +174,7 @@ class App extends Component {
         <product 
          setCurrentProduct={this.setCurrentProduct.bind(this)} 
          activeProduct={this.state.activeProduct}
-         deleteProduct={this.deleteproduct.bind(this)}
+         deleteProduct={this.deleteProduct.bind(this)}
          toggleModal={this.toggleModal.bind(this)}
        />
       )
@@ -197,12 +205,16 @@ class App extends Component {
             activeProduct={this.state.activeProduct}
             /> : ''}
             {this.state.activeProduct ?
+
+            
             <ProductShow
             setCurrentProduct={this.setCurrentProduct.bind(this)}
             activeProduct={this.state.activeProduct}
             toggleModal={this.toggleModal.bind(this)}
             deleteProduct={this.deleteProduct.bind(this)}
             /> : ''}
+
+            {/* {this.state.show ? this.renderTiles()} */}
       </div>
     );
   }

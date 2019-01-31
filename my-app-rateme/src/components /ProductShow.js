@@ -15,17 +15,19 @@ const ProductShow = props => {
         <div className="container">
           <div className="Product">
             <div>
-              <h2>{props.activeProduct.name}</h2>
-              <h4>{props.activeProduct.rating} / 10 ✭</h4>
+            <h2>{props.activeProduct.name}</h2>
+            <img src={props.activeProduct.image} alt="" />
+              <h4>Rating:<br></br>{props.activeProduct.rating} / 5 ✭</h4>
             </div>
             <div>
               <div className="Product-details">
+             
               <p>{props.activeProduct.brand}</p>
-                <p>{props.activeProduct.description}</p>
-                <p>{props.activeProduct.expected_price}</p>
-                <p>{props.activeProduct.color}</p>
-                <p>{props.activeProduct.model_year}</p>
-              <img src={props.activeProduct.image} alt="" />
+                <p>Description:<br></br> {props.activeProduct.description}</p>
+                <p>Expected Price: <br></br>{props.activeProduct.expected_price}</p>
+                <p>Color:<br></br>{props.activeProduct.color}</p>
+                <p>Model:<br></br>{props.activeProduct.model_year}</p>
+              
                
                 <div className="Product-buttons">
                   <button onClick={() => {props.toggleModal()}}>Edit</button>
